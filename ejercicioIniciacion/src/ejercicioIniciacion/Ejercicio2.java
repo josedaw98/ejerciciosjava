@@ -5,16 +5,27 @@ import java.util.Scanner;
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
-		float sueldoBase;
-		float comision;
-		float sueldo;
+		float comision1;
+		float comision2;
+		float comision3;
+		final float sueldo=1200;
+		final float porcentaje= 0.1f;
 		
 		Scanner sc =  new Scanner(System.in);
-		System.out.println("ingrese sueldo base");
-		sueldoBase=sc.nextFloat();
-		comision=sueldoBase*0.10f;//se pone la f para que sea de tipo float , sino seria un double por defecto
-		sueldo=sueldoBase+comision;
-		System.out.println("El sueldo base es : " + sueldoBase + " la comsion es : "+ comision + " El sueldo es final es : " + sueldo);
+		System.out.println("valor de la venta 1:");
+		comision1=sc.nextFloat()*porcentaje;
+		
+		System.out.println("valor de la venta 2:");
+		comision2=sc.nextFloat()*porcentaje;
+		
+		System.out.println("valor de la venta 3:");
+		comision3=sc.nextFloat()*porcentaje;
+		
+		System.out.printf("sueldo final : " + "%.2f %n" , comision1 + comision2 + comision3 +sueldo);
+		
+		System.out.println("valor de la venta 1: " +comision1 );
+		System.out.println("valor de la venta 2: " +comision2 );
+		System.out.println("valor de la venta 3: " +comision3 );
 
 	}
 
