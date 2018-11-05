@@ -59,7 +59,7 @@ public class DibujosAsteriscos {
 					}
 				}System.out.println();//salto de linea
 			}
-			System.out.println();//salto de linea
+			
 		}
 
 	}
