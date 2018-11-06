@@ -6,7 +6,7 @@ public class PruebaDibujosAsteriscos {
 		
 		//DibujosAsteriscos.Volcan(6);
 		//DibujosAsteriscos.mosaico(4, 8);
-		DibujosAsteriscos.tablero(8, 8);
+		DibujosAsteriscos.tablero2(8, 8, 4);
 		
 
 	}
