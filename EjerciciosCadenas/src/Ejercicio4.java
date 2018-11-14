@@ -1,23 +1,26 @@
 import java.util.Scanner;
 
 public class Ejercicio4 {
-
+	static String c = "trwagmyfpdxbnjzsqvhlcke";
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Escribe tu nif");
 		String dni = sc.nextLine();
-		int p_num= ;
-		char letra_dni = (char) dni.length();
-		String c = "trwagmyfpdxbnjzsqvhlcke";
-		int v = p_num % 23;
-		char letra = c.charAt(v);
-		System.out.println(p_num);
-		if(letra==letra_dni) {
-			System.out.println("el dni= "+ dni+ "es valido");
+		
+		if(ValidarDni(dni)) {
+			System.out.println("el dni es valido");
 		}else {
-			System.out.println("el dni= "+ dni+ " no es valido");
+			System.out.println("el dni no es valido");
 		}
-
 	}
+	
+	static boolean ValidarDni(String nif) {
+		int numero=Integer.parseInt(nif.substring(0, nif.length()-1));
+		char letra= nif.toLowerCase().charAt(nif.length()-1);
+		int i=numero%23;
+		return(letra == c.charAt(i));
+	
+	}
+	
 
 }
